@@ -8,6 +8,9 @@ informations = {}
 
 while True:
     input_name = input("Enter name: ")
+    if not input_name.isalpha():
+        print("Please enter a valid name")
+        continue
 
     while True:
         try:
@@ -23,6 +26,7 @@ while True:
         continue
     elif add_name == 'N':
         print("Here are the names and ages you entered: ", list(informations.keys()))
+        print("The oldest is: ")
         break
     else:
         print("Invalid input")
