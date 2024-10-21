@@ -1,10 +1,7 @@
 #Make an array using the dictionary format
-#Ask user input for name and age
-#Ask user for input inside a loop where they will be asked if they want to input another entry, which they could only answer with "Yes" and "No"
-#Find and print the oldest
-
 informations = {}
 
+#Ask user input for name and age
 while True:
     input_name = input("Enter name: ")
     if not input_name.isalpha():
@@ -20,6 +17,7 @@ while True:
             
     informations[input_name] = input_age
 
+#Ask user for input inside a loop where they will be asked if they want to input another entry, which they could only answer with "Yes" and "No"
     add_name = input("Would you like to add more names? (Y/N) ").upper()
     if add_name == 'Y':
         continue
@@ -29,6 +27,7 @@ while True:
     else:
         print("Invalid input")
 
+#Find and print the oldest
 if informations:
     oldest = max(informations, key=informations.get)
-    print("The oldest is: ", oldest)
+    print(f"The oldest is: {oldest} which is {input_age} years old")
