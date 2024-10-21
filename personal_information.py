@@ -18,13 +18,13 @@ while True:
         except:
             print("Enter a valid age ")
             
-    informations[input_name] = None
+    informations[input_name] = input_age
 
     add_name = input("Would you like to add more names? (Y/N) ").upper()
     if add_name == 'Y':
         continue
     elif add_name == 'N':
-        print("Here are the names and ages you entered: ", list(informations.keys()))
+        print("Here are the names and ages you entered: ", informations)
         break
     else:
         print("Invalid input")
