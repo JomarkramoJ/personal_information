@@ -7,14 +7,14 @@ name = {}
 
 while True:
     input_name = input("Enter name: ")
+    name[input_name] = None
+
     while True:
             add_name = input("Would you like to add more names? (Y/N) ").upper()
             if add_name == 'Y':
                 break
             elif add_name == 'N':
-                print("Here are the names you entered: ", name)
+                print("Here are the names you entered: ", list(name.keys()))
                 exit()
             else:
                 print("Invalid input")
-
-    name.append(input_name)
