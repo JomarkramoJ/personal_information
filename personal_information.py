@@ -3,20 +3,25 @@
 #Ask user to input information again when, "Yes"
 #Find and print the oldest
 
-name = {}
-age = {}
+informations = {}
 
 while True:
     input_name = input("Enter name: ")
-    name[input_name] = None
+
+    while True:
+        try:
+            input_age = int(input("Enter age: "))
+            break
+        except:
+            print("Enter a valid age ")
+            
+    informations[input_name] = None
 
     add_name = input("Would you like to add more names? (Y/N) ").upper()
     if add_name == 'Y':
         continue
     elif add_name == 'N':
-        print("Here are the names you entered: ", list(name.keys()))
+        print("Here are the names and ages you entered: ", list(informations.keys()))
         break
     else:
         print("Invalid input")
-
-input_age = input("Enter age: ")
