@@ -50,4 +50,4 @@ if informations:
     if len(oldest) > 1:
         print(f"The oldest people in the list are: {', '.join(oldest)}, all aged {oldest_age} years old.")
     else:
-        print(f"The oldest is: {''.join(oldest)} which is {input_age} years old")
+        print(f"The oldest is: {''.join(oldest)} which is {oldest_age} years old")
