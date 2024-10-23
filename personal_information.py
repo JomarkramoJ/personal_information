@@ -44,7 +44,6 @@ while True:
         break
 
 #Find and print the oldest
-
 if informations:
     oldest_age = max(informations.values())
     oldest = [name for name, age in informations.items() if age == oldest_age]
