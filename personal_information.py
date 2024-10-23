@@ -11,7 +11,10 @@ while True:
     while True:
         try:
             input_age = int(input("Enter age: "))
-            break
+            if input_age >= 0:
+                break
+            else:
+                print("invalid age")
         except:
             print("Enter a valid age ")
             
